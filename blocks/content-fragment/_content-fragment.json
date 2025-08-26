@@ -20,26 +20,23 @@
     {
       "id": "contentfragment",
       "fields": [
-        {          
+        {
           "component": "aem-content",
           "name": "reference",
           "label": "Reference",
           "valueType": "string",
           "required": true,
-          "validation": {
-            "rootPath": "/content/dam"
-          }
+          "validation": { "rootPath": "/content/dam" }
         },
         {
           "component": "select",
           "name": "variation",
-          "label": "Variation",
+          "label": "Choose Variation",
           "valueType": "string",
           "required": false,
           "options": [
             { "label": "Master", "value": "master" },
-            { "label": "Alt Hero", "value": "alt_hero" },
-            { "label": "Promo Banner", "value": "promo_banner" }
+            { "label": "Mobile", "value": "mobile" }
           ],
           "default": "master"
         }
