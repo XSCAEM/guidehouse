@@ -35,10 +35,10 @@
           "valueType": "string",
           "required": false,
           "options": [
-            { "label": "Master", "value": "master" },
-            { "label": "Mobile", "value": "mobile" }
+            { "label": "Tech Partner Variant", "value": "Tech Partner Variant" },
+            { "label": "GenAi Unified Approach", "value": "GenAi Unified Approach" }
           ],
-          "default": "master"
+          "default": "Tech Partner Variant"
         }
       ]
     }
