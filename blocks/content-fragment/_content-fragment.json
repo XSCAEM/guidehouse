@@ -23,7 +23,7 @@
         {
           "component": "aem-content",
           "name": "reference",
-          "label": "Reference",
+          "label": "Content Fragment path",
           "valueType": "string",
           "required": true,
           "validation": { "rootPath": "/content/dam" }
@@ -31,14 +31,16 @@
         {
           "component": "select",
           "name": "variation",
-          "label": "Choose Variation",
+          "label": "Variation",
           "valueType": "string",
           "required": false,
           "options": [
-            { "label": "Tech Partner Variant", "value": "Tech Partner Variant" },
-            { "label": "GenAi Unified Approach", "value": "GenAi Unified Approach" }
+            { "label": "Default", "value": "master" },
+            { "label": "Variation 1", "value": "variation_1" },
+            { "label": "Variation 2", "value": "variation_2" },
+            { "label": "Variation 3", "value": "variation_3" }
           ],
-          "default": "Tech Partner Variant"
+          "default": "master"
         }
       ]
     }
