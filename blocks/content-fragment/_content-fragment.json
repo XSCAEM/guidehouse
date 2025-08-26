@@ -27,8 +27,21 @@
           "valueType": "string",
           "required": true,
           "validation": {
-              "rootPath": "/content/dam"
+            "rootPath": "/content/dam"
           }
+        },
+        {
+          "component": "select",
+          "name": "variation",
+          "label": "Variation",
+          "valueType": "string",
+          "required": false,
+          "options": [
+            { "label": "Master", "value": "master" },
+            { "label": "Alt Hero", "value": "alt_hero" },
+            { "label": "Promo Banner", "value": "promo_banner" }
+          ],
+          "default": "master"
         }
       ]
     }
