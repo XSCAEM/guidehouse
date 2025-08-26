@@ -37,13 +37,4 @@
           "options": [
             { "label": "Default", "value": "master" },
             { "label": "Variation 1", "value": "variation_1" },
-            { "label": "Variation 2", "value": "variation_2" },
-            { "label": "Variation 3", "value": "variation_3" }
-          ],
-          "default": "master"
-        }
-      ]
-    }
-  ],
-  "filters": []
-}
+            {
