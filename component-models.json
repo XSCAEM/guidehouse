@@ -533,31 +533,44 @@
     ]
   },
   {
-    "id": "contentfragment",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Reference",
-        "valueType": "string",
-        "required": true,
-        "validation": {
-            "rootPath": "/content/dam"
-        }
-      },
-      {
-        "component": "select",
-        "name": "style",
-        "label": "Variation",
-        "options": [
-          {
-            "name": "Master",
-            "value": "master"
-          }
-        ]
+  "id": "contentfragment",
+  "fields": [
+    {
+      "component": "aem-content",
+      "name": "reference",
+      "label": "Reference",
+      "valueType": "string",
+      "required": true,
+      "validation": {
+        "rootPath": "/content/dam"
       }
-    ]
-  },
+    },
+    {
+      "component": "select",
+      "name": "style",
+      "label": "Variation",
+      "options": [
+        {
+          "name": "Default",
+          "value": "master"
+        },
+        {
+          "name": "Variation 1",
+          "value": "variation_1"
+        },
+        {
+          "name": "Variation 2",
+          "value": "variation_2"
+        },
+        {
+          "name": "Variation 3",
+          "value": "variation_3"
+        }
+      ],
+      "default": "master"
+    }
+  ]
+},
   {
     "id": "hero",
     "fields": [
