@@ -1,39 +1,79 @@
 {
-  "id": "contentfragment",
-  "fields": [
+  "definitions": [
     {
-      "component": "aem-content",
-      "name": "reference",
-      "label": "Reference",
-      "valueType": "string",
-      "required": true,
-      "validation": {
-        "rootPath": "/content/dam"
-      }
-    },
-    {
-      "component": "select",
-      "name": "style",
-      "label": "Variation",
-      "options": [
-        {
-          "name": "Default",
-          "value": "master"
-        },
-        {
-          "name": "Variation 1",
-          "value": "variation_1"
-        },
-        {
-          "name": "Variation 2",
-          "value": "variation_2"
-        },
-        {
-          "name": "Variation 3",
-          "value": "variation_3"
+      "title": "Content Fragment",
+      "id": "contentfragment",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Content Fragment",
+              "model": "contentfragment"
+            }
+          }
         }
-      ],
-      "default": "master"
+      }
     }
-  ]
+  ],
+  "models": [
+    {
+      "id": "contentfragment",
+      "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference",
+        "valueType": "string",
+        "required": true,
+        "validation": {
+            "rootPath": "/content/dam"
+        }
+      },
+      {
+        "component": "select",
+        "name": "style",
+        "label": "Choose Variation",
+        "options": [
+          {
+            "name": "Master",
+            "value": "master"
+          },
+            {
+            "name": "Mobile",
+            "value": "mobile"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "displaystyle",
+        "label": "Style",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "Image Left",
+            "value": "image-left"
+          },
+          {
+            "name": "Image Right",
+            "value": "image-right"
+          },
+          {
+            "name": "Image Top",
+            "value": "image-top"
+          },
+          {
+            "name": "Image Bottom",
+            "value": "image-bottom"
+          }
+        ]
+      }
+    ]
+    }
+  ],
+  "filters": []
 }
