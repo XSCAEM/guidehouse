@@ -1,0 +1,18 @@
+.block.separator.guidehouse {
+  --gh-sep-color: #B5F32B;
+  --gh-sep-height: clamp(72px, 12vw, 200px);
+  --gh-sep-gradient: linear-gradient(
+    90deg,
+    var(--gh-sep-color) 0%,
+    color-mix(in srgb, var(--gh-sep-color) 82%, #ffffff 18%) 100%
+  );
+  position: relative;
+  margin-block: clamp(16px, 5vw, 64px);
+}
+
+.block.separator.guidehouse::before {
+  content: "";
+  display: block;
+  height: var(--gh-sep-height);
+  background: var(--gh-sep-gradient);
+}
