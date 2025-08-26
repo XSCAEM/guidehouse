@@ -9,7 +9,7 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Content Fragment",
-              "model": "contentfragment"
+              "model": "contentfragment_v2"
             }
           }
         }
@@ -18,23 +18,21 @@
   ],
   "models": [
     {
-      "id": "contentfragment",
+      "id": "contentfragment_v2",
       "fields": [
-        {
-          "component": "aem-content",
-          "name": "reference",
-          "label": "Content Fragment path",
-          "valueType": "string",
-          "required": true,
-          "validation": { "rootPath": "/content/dam" }
-        },
-        {
-          "component": "select",
-          "name": "variation",
-          "label": "Variation",
-          "valueType": "string",
-          "required": false,
+        { "component": "aem-content", "name": "reference", "label": "Content Fragment path", "valueType": "string", "required": true,
+          "validation": { "rootPath": "/content/dam" } },
+        { "component": "select", "name": "variation", "label": "Variation", "valueType": "string",
           "options": [
             { "label": "Default", "value": "master" },
             { "label": "Variation 1", "value": "variation_1" },
-            {
+            { "label": "Variation 2", "value": "variation_2" },
+            { "label": "Variation 3", "value": "variation_3" }
+          ],
+          "default": "master"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
