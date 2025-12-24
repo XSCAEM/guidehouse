@@ -26,6 +26,19 @@ import {
   PATH_PREFIX,
 } from './utils.js';
 
+import {
+  runExperimentation,
+  showExperimentationRail,
+} from './experiment-loader.js';
+
+const experimentationConfig = {
+  prodHost: 'www.mysite.com', // TODO: change domains for your prodHost.
+  audiences: {
+    mobile: () => window.innerWidth < 600,
+    desktop: () => window.innerWidth >= 600,
+    // define your custom audiences here as needed
+  },
+};
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -219,6 +232,7 @@ async function loadEager(doc) {
   //setPageLanguage();
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+  await runExperimentation(doc, experimentationConfig);
   renderWBDataLayer();
   const main = doc.querySelector('main');
   if (main) {
@@ -254,6 +268,8 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+
+  await showExperimentationRail(doc, experimentationConfig);
 }
 
 
